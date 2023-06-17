@@ -1,0 +1,96 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.flex-container-row {
+  flex-direction: row;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary {
+  color: #f9f5ff;
+}
+
+.compliment {
+  color: #cc2936;
+}
+
+.mt-1 {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: #f9f5ff;
+  text-align: center;
+  position: relative;
+  font-size: 4rem;
+  text-shadow: #111111 5px 4px;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 20px);
+  left: 22px;
+  width: 100%;
+  height: 18px;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #cc2936;
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #f9f5ff;
+}
+button:first-of-type {
+  margin-right: 2.5rem;
+}
+button:hover {
+  cursor: pointer;
+  color: #111111;
+}
+button:hover a {
+  color: #111111;
+}
+button:hover:after {
+  height: calc(100% + 1rem);
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
+}
+button::after {
+  content: "";
+  width: calc(100% + 2rem);
+  height: 2px;
+  background-color: #cc2936;
+  position: absolute;
+  bottom: -0.5rem;
+  left: -1rem;
+  z-index: -1;
+}
+button a {
+  color: #f9f5ff;
+  text-decoration: none;
+}

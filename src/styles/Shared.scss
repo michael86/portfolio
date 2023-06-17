@@ -1,0 +1,107 @@
+$primary: #111111;
+$secondary: #f9f5ff;
+$compliment: #cc2936;
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+
+  &-row {
+    flex-direction: row;
+  }
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.compliment {
+  color: $compliment;
+}
+
+.mt-1 {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: $secondary;
+  text-align: center;
+  position: relative;
+  font-size: 4rem;
+  text-shadow: #111111 5px 4px;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 20px);
+    left: 22px;
+
+    width: 100%;
+    height: 18px;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: $compliment;
+  }
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: $secondary;
+
+  &:first-of-type {
+    margin-right: 2.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $primary;
+
+    a {
+      color: $primary;
+    }
+
+    &:after {
+      height: calc(100% + 1rem);
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: calc(100% + 2rem);
+    height: 2px;
+    background-color: $compliment;
+    position: absolute;
+    bottom: -0.5rem;
+    left: -1rem;
+    z-index: -1;
+  }
+  a {
+    color: $secondary;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,46 @@
+$primary: #111111;
+$secondary: #f9f5ff;
+$compliment: #cc2936;
+
+.footer {
+  margin-top: 7rem;
+  height: 15rem;
+  background-color: rgba($color: $secondary, $alpha: 0.2);
+  position: relative;
+
+  &__contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      margin-top: 4.5rem;
+
+      &:first-of-type {
+        margin-right: 2rem;
+      }
+    }
+
+    img {
+      width: 50px;
+      aspect-ratio: 1;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    top: -2.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5.5rem;
+    background-color: $compliment;
+    border-radius: 12px;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: $secondary;
+    text-align: center;
+  }
+}

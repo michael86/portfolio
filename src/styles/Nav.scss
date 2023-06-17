@@ -1,0 +1,22 @@
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  z-index: 3;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.5rem;
+    font-size: 2rem;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "./Shared.css";
+@import-normalize;
+$primary: #111111;
+$secondary: #f9f5ff;
+$compliment: #cc2936;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #111;
+}
+
+img,
+video,
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  position: relative;
+
+  .particle-container {
+    position: sticky;
+    top: 0;
+    z-index: -2;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  @for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+      100% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      }
+    }
+
+    .particle:nth-child(#{$i}) {
+      animation: particle-animation-#{$i} 60s infinite;
+      $size: random(5) + 1 + px;
+      opacity: 0.3;
+      height: $size;
+      width: $size;
+      animation-delay: -$i * 0.2s;
+      transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      background: rgba($color: $secondary, $alpha: 0.5);
+    }
+  }
+}

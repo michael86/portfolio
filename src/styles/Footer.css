@@ -1,0 +1,36 @@
+.footer {
+  margin-top: 7rem;
+  height: 15rem;
+  background-color: rgba(249, 245, 255, 0.2);
+  position: relative;
+}
+.footer__contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer__contact-container a {
+  margin-top: 4.5rem;
+}
+.footer__contact-container a:first-of-type {
+  margin-right: 2rem;
+}
+.footer__contact-container img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.footer__scroll {
+  position: absolute;
+  top: -2.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 5.5rem;
+  background-color: #cc2936;
+  border-radius: 12px;
+}
+.footer p {
+  margin-top: 1rem;
+  color: #f9f5ff;
+  text-align: center;
+}

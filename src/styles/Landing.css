@@ -1,0 +1,50 @@
+@import "./Shared.css";
+.landing {
+  height: 100svh;
+  height: 100vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #aaa1a1;
+  overflow-x: hidden;
+  text-align: center;
+}
+.landing h1 span {
+  display: inline-block;
+  font-size: 4rem;
+}
+.landing #tsparticles {
+  height: 100%;
+  overflow: hidden;
+}
+.landing a {
+  background-color: transparent;
+  border: 1px solid #cc2936;
+  border-radius: 20px;
+  color: #f9f5ff;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  z-index: 1;
+  text-decoration: none;
+}
+.landing a:hover {
+  cursor: pointer;
+  translate: 0 -50px;
+  box-shadow: 0px 10px 15px -6px #cc2936;
+}
+.landing a::after {
+  content: none;
+}
+.landing a svg {
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: translateY(3px);
+}
+@media screen and (min-width: 992px) {
+  .landing {
+    font-size: 4.5rem;
+  }
+}
