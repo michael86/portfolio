@@ -52,39 +52,4 @@ $compliment: #cc2936;
       gap: 70px;
     }
   }
-
-  &__skill {
-    padding: 0.2rem;
-    border-radius: 15px;
-    margin-top: 1.5rem;
-    background: linear-gradient(to right, rgba(30, 30, 30, 0.5), $compliment);
-
-    .skill__content {
-      background-color: #111111;
-      padding: 2rem;
-      border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      min-height: 100px;
-
-      @media screen and (min-width: "992px") {
-        font-size: 1.5rem;
-      }
-
-      img {
-        aspect-ratio: 2 / 2;
-        width: 100%;
-        margin-bottom: 2rem;
-        max-width: 50px;
-        max-height: 50px;
-      }
-    }
-
-    @media screen and (min-width: "219px") {
-      max-width: 13rem;
-    }
-  }
 }

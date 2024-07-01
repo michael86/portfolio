@@ -44,12 +44,13 @@ const projects = [
     builtWith: " This was built with React and Redux",
   },
   {
-    title: "Hugo Boss Clone",
-    link: "https://hugo.michael-hodgson.co.uk",
-    github: "https://github.com/michael86/Hugo-Boss-Clone",
-    img: "hugo.png",
-    alt: "Hugo Boss Clone",
-    description: "A clone of the Hugo Boss website using nothing but HTML and SCSS/CSS.",
+    title: "Crimehood",
+    link: "https://crimehood.michael-hodgson.co.uk/",
+    github: "https://github.com/michael86/crime-hood",
+    img: "crimehood.png",
+    alt: "Crimehood",
+    description:
+      "A clone of the Hugo Boss website using nothing but HTML and SCSS/CSS. Built with React, Axios, Gsap, and Leaflet (open streetmap)",
   },
 ];
 

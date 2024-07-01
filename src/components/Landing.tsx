@@ -7,6 +7,7 @@ import usePrefersReducedMotion from "../hooks/usePreferesReducedMotion";
 import ParticlesComponent from "./ParticlesComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import Skills from "./Skills";
 
 const Landing = () => {
   const scope = useRef<HTMLDivElement>(null);
@@ -55,6 +56,8 @@ const Landing = () => {
         <p className="z-index-1">
           I'm a <span className="secondary">full stack</span> web developer
         </p>
+
+        <Skills />
 
         <a href="#projects">
           view my projects &nbsp;

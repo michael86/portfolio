@@ -9,10 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   const prefersReducedMotion: boolean = usePrefersReducedMotion();
   const scope = useRef<HTMLElement>(null);
-  const languages = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    if (prefersReducedMotion || !scope.current || !languages.current) return;
+    if (prefersReducedMotion || !scope.current) return;
 
     const header: HTMLElement = scope.current.children[0] as HTMLElement;
     const paragraphs: Array<any> = Array.from(scope.current!.children[1].children[0].children);
@@ -42,18 +41,6 @@ const About = () => {
           scale: 0,
         });
     }, [scope]);
-
-    gsap.context(() => {
-      gsap.from(".about__skill", {
-        scrollTrigger: {
-          trigger: languages.current,
-          start: "top 65%",
-        },
-        scale: 0,
-        autoAlpha: 0,
-        delay: "random(0, 1)",
-      });
-    }, [languages.current]);
   }, [prefersReducedMotion]);
 
   return (
@@ -62,92 +49,23 @@ const About = () => {
       <div className="about__container">
         <div className="about__summary">
           <p>
-            A lover of all things tech, I'm a full stack web developer with a passion for
-            animations. With a fast learning mentality and an attitude that does well under
-            pressure, I'm always eager to learn new frameworks, libraries as well as tech stacks.
+            A lover of all things tech, I'm a full-stack web developer with a deep passion for
+            animations and a keen interest in the latest technological advancements. My journey in
+            the tech world has been driven by an insatiable curiosity and a desire to create
+            engaging, dynamic user experiences. With a fast learning mentality and an attitude that
+            thrives under pressure, I continuously seek out new frameworks, libraries, and tech
+            stacks to expand my skill set and stay ahead of industry trends.
           </p>
+
           <p className="mt-1">
-            I always strive to deliver any tasks assigned to me on time, to the best of my
-            capabilites and am always open to constructive critisim.
+            I take great pride in my ability to deliver any tasks assigned to me on time and to the
+            best of my capabilities. My approach to work is detail-oriented and driven by a
+            commitment to excellence, ensuring that every project I undertake meets the highest
+            standards of quality. Moreover, I am always open to constructive criticism and actively
+            seek feedback to improve my work. This openness to learning and growth enables me to
+            adapt quickly and effectively to new challenges and opportunities in the ever-evolving
+            tech landscape.
           </p>
-        </div>
-
-        <div className="about__languages" ref={languages}>
-          <div className="languages__left-container">
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/css.png" alt="css" />
-                <h3>CSS</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/html.png" alt="html" />
-                <h3>HTML</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/javascript.png" alt="javascript" />
-                <h3>JAVASCRIPT</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="languages__center-container">
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/git.png" alt="git" />
-                <h3>GIT</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/express.png" alt="express" />
-                <h3>EXPRESS</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/mongo.png" alt="mongo" />
-                <h3>MONGO</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/node.png" alt="node" />
-                <h3>NODE</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="languages__right-container">
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/react.png" alt="react" />
-                <h3>REACT</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/sass.png" alt="sass" />
-                <h3>SASS/SCSS</h3>
-              </div>
-            </div>
-
-            <div className="about__skill">
-              <div className="skill__content">
-                <img src="/imgs/about/sql.png" alt="sql" />
-                <h3>SQL</h3>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

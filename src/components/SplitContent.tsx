@@ -6,6 +6,11 @@ interface Props {
   tag: keyof ReactHTML;
 }
 
+/**
+ * Will split a given string into a series of spans, contained within a parent tag.
+ * @param param0 {content: string - normally what you want to be displayed, clases: [string] - array of class names, tag: string - html entity to be used}
+ * @returns React Element
+ */
 const SplitContent = ({ content, classes, tag }: Props): ReactElement => {
   const split: Array<string> = content.split("");
 
