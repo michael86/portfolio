@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import "./../styles/Projects.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HighlightFont from "./HighlightFont";
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     img: "cims-landing.png",
     alt: "complete inventoory management system",
     description: "full stack application used to manage inventory within a company.",
-    builtWith: "Built with React, Express, Bootstrap, NodeJS and SQL",
+    builtWith: ["React", "Express", "Bootstrap", "NodeJS", "SQL"],
   },
   {
     title: "The Weather Channel",
@@ -21,7 +22,7 @@ const projects = [
     alt: "The Weather Channel",
     description:
       "A simple project showing the use of API authentication, alongside asynchronous functions.",
-    builtWith: " Built with vanilla JS, browser apis, JOI validation and axios",
+    builtWith: ["Javascript", "localstorage api", "Openweather Api", "JOI validation", "axios"],
   },
   {
     title: "Creekview Electronics LTD",
@@ -31,7 +32,7 @@ const projects = [
     alt: "Creekview Electronics LTD",
     description:
       "My current employer wanted to update his website and move away from wix, he had asked me to create the site from scratch.",
-    builtWith: " This is built with React as well as the browers navigator api",
+    builtWith: ["React", "navigator api", "typescript", "gsap"],
   },
   {
     title: "Hackathon - Early Learner Reading",
@@ -41,7 +42,7 @@ const projects = [
     alt: "Hackathon - Early Learner Reading",
     description:
       "As part of The Jump bootcamp, we had the oppertunity to take part in a hackathon. We had 8 hours to put together an online app to help parents teach early learners to read and spell.",
-    builtWith: " This was built with React and Redux",
+    builtWith: ["React", "Redux"],
   },
   {
     title: "Crimehood",
@@ -51,6 +52,7 @@ const projects = [
     alt: "Crimehood",
     description:
       "A clone of the Hugo Boss website using nothing but HTML and SCSS/CSS. Built with React, Axios, Gsap, and Leaflet (open streetmap)",
+    builtWith: ["Javascript", "HTML", "CSS"],
   },
 ];
 
@@ -117,8 +119,15 @@ const Projects = () => {
               </a>
 
               <div className="project__description">
+                {project.builtWith && (
+                  <p>
+                    Built with:{" "}
+                    {project.builtWith.map((tech) => {
+                      return <HighlightFont text={tech} />;
+                    })}
+                  </p>
+                )}
                 <p>{project.description}</p>
-                {project.builtWith && <p>{project.builtWith}</p>}
 
                 <button>
                   <a href={project.github} target="__blank">

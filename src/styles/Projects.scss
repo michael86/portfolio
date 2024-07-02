@@ -100,6 +100,12 @@ $compliment: #cc2936;
     width: fit-content;
   }
 
+  &__description .highlight {
+    color: $compliment;
+    &:not(:last-of-type)::after {
+      content: ", ";
+    }
+  }
   @media screen and (min-width: "992px") {
     margin-bottom: 10rem;
     &__description {
@@ -110,16 +116,21 @@ $compliment: #cc2936;
       padding: 2rem;
       background-color: rgba($color: $secondary, $alpha: 0.1);
       border-radius: 10px;
+      width: 100%;
     }
+
     &:nth-of-type(odd) {
       & .project__link {
         grid-column: 2 / 2;
 
         justify-self: end;
+        width: 90%;
         img {
           transform-origin: center right;
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
+          width: 100%;
+          max-width: none;
         }
       }
 
@@ -134,10 +145,13 @@ $compliment: #cc2936;
     &:nth-of-type(even) {
       & .project__link {
         justify-self: start;
+        width: 90%;
+
         img {
           transform-origin: center left;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
+          max-width: none;
         }
       }
       & .project__description {
