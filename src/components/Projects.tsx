@@ -51,8 +51,8 @@ const projects = [
     img: "crimehood.png",
     alt: "Crimehood",
     description:
-      "A clone of the Hugo Boss website using nothing but HTML and SCSS/CSS. Built with React, Axios, Gsap, and Leaflet (open streetmap)",
-    builtWith: ["Javascript", "HTML", "CSS"],
+      "A project utilising the police data api to show a user crimes as well as stop and searches within any area provided within the uk,",
+    builtWith: ["Javascript", "HTML", "CSS", "AXIOS", "React"],
   },
 ];
 
